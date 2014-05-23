@@ -1,14 +1,31 @@
 /*jslint vars: true, plusplus: true, browser: true, nomen: true, indent: 4, maxerr: 50 */
-/*global define, console */
+/*global define */
 
-define(function (require, exports, module) {
+define(function (require) {
     "use strict";
     
-    var NodeConnection = require("node-connection"),
-        Promise = require("bluebird"),
+    var NodeDomain = require("node-connection").NodeDomain,
         $ = require("jquery");
     
+    var PREFIX = "/Users/wehrman/Source/node-connection-example/";
+
     $(function () {
-        $(".content").html("hello world");
+
+        $(".content").append("Creating test domain... <br/>");
+        var testDomain = new NodeDomain("testing", PREFIX + "js/node/TestingDomain.js");
+
+        testDomain.promise().then(function () {
+            $(".content").append("Test domain ready.<br/>");
+        });
+
+        testDomain.exec("testCommand", "ping").then(function (value) {
+            $(".content").append("Test command OK: " + value + "<br/>");
+        }, function (err) {
+            $(".content").append("Test command err: " + err + "<br/>");
+        });
+
+        testDomain.on("testEvent", function (value1, value2, value3) {
+            $(".content").append("Test event OK: " + [value1, value2, value3].join(", ") + "<br/>");
+        });
     });
 });
