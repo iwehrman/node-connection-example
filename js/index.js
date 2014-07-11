@@ -5,7 +5,7 @@ requirejs.config({
     "paths": {
         "bluebird": "../components/bluebird/js/browser/bluebird",
         "jquery": "../components/jquery/dist/jquery",
-        "EventEmitter": "../components/eventEmitter/EventEmitter"
+        "eventEmitter": "../components/eventEmitter/EventEmitter"
     },
     "packages": [
         {
