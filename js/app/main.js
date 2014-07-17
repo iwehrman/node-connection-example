@@ -9,10 +9,14 @@ define(function (require) {
     
     var PREFIX = "/Users/wehrman/Source/node-connection-example/";
 
+    var getRemotePort = function (callback) {
+        callback(null, 59595);
+    };
+
     $(function () {
 
         $(".content").append("Creating test domain... <br/>");
-        var testDomain = new NodeDomain("testing", PREFIX + "js/node/TestingDomain.js");
+        var testDomain = new NodeDomain("testing", PREFIX + "js/node/TestingDomain.js", getRemotePort);
 
         testDomain.promise().then(function () {
             $(".content").append("Test domain ready.<br/>");
