@@ -4,10 +4,10 @@
 define(function (require) {
     "use strict";
     
-    var NodeDomain = require("node-connection").NodeDomain,
+    var NodeDomain = require("generator-connection").NodeDomain,
         $ = require("jquery");
     
-    var PREFIX = "/Users/wehrman/Source/node-connection-example/";
+    var PREFIX = "/Users/wehrman/Source/generator-connection-example/";
 
     var getRemotePort = function (callback) {
         callback(null, 59595);

@@ -9,9 +9,8 @@ requirejs.config({
     },
     "packages": [
         {
-            "name": "node-connection",
-            "location": "../components/node-connection",
-            "main": "index"
+            "name": "generator-connection",
+            "location": "../components/generator-connection"
         }
     ]
 });
