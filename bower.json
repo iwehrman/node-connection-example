@@ -1,12 +1,12 @@
 {
-  "name": "font-attributes-domain",
-  "version": "0.0.0",
+  "name": "generator-connection-example",
+  "description": "An example app using generator-connection to define a Domain and make remote generator RPC calls",
+  "version": "0.0.1",
   "authors": [
     "Ian Wehrman <wehrman@adobe.com>"
   ],
   "main": "index.js",
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "node-connection": "https://github.com/iwehrman/node-connection.git",
+    "generator-connection": "https://github.com/adobe-photoshop/generator-connection.git#~1",
     "requirejs": "~2.1.11",
     "jquery": "~2.1.1"
   }
