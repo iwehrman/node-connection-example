@@ -16,7 +16,7 @@ define(function (require) {
     $(function () {
 
         $(".content").append("Creating test domain... <br/>");
-        var testDomain = new NodeDomain("testing", PREFIX + "js/node/TestingDomain.js", getRemotePort);
+        var testDomain = new NodeDomain("testing", getRemotePort, PREFIX + "js/node/TestingDomain.js");
 
         testDomain.promise().then(function () {
             $(".content").append("Test domain ready.<br/>");

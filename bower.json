@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "generator-connection": "https://github.com/adobe-photoshop/generator-connection.git#~1",
+    "generator-connection": "https://github.com/adobe-photoshop/generator-connection.git#~2",
     "requirejs": "~2.1.11",
     "jquery": "~2.1.1"
   }
